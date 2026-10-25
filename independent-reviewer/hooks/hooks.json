@@ -1,0 +1,16 @@
+ {
+    "hooks": {
+        "Stop": [
+        {
+            "hooks": [
+            {
+                "type": "command",
+                "command": "if codex exec --output-last-message planning/CODEX_REVIEW.md \"Review the changes since the last commit (git diff HEAD plus untracked files). Report bugs, spec mismatches with planning/PLAN.md, and risks, ranked by severity with file:line references.\" > /dev/null 2>&1; then echo '{\"systemMessage\": \"Codex review finished: planning/CODEX_REVIEW.md\"}'; else echo '{\"systemMessage\": \"Codex review FAILED - run codex exec manually to see the error\"}'; fi",
+                "timeout": 600,
+                "statusMessage": "Codex reviewing changes..."
+            }
+            ]
+        }
+        ]
+    }
+}
