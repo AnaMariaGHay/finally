@@ -137,16 +137,16 @@ Valid cluster names: `core_loop`, `audit_review`, `milestone`, `research_ideate`
 ## runtimeConfigDir resolution
 
 The `runtimeConfigDir` for `applySurface` is the **base Claude config directory**
-(`~/.claude`), NOT the skills sub-directory (`C:/Users/User/Projects/finally/.claude/skills`).
+(`C:/Users/User/Projects/finally/.claude`), NOT the skills sub-directory (`C:/Users/User/Projects/finally/.claude/skills`).
 
 This matches `installRuntimeArtifacts` and `uninstallRuntimeArtifacts`, which also
-receive `~/.claude` as `configDir`. The skill dirs themselves live at
+receive `C:/Users/User/Projects/finally/.claude` as `configDir`. The skill dirs themselves live at
 `C:/Users/User/Projects/finally/.claude/skills/gsd-*/` because the `claude global` layout has `destSubpath =
 'skills'` — they are derived from `configDir`, not the root for it.
 
 ```bash
 # Claude Code — global install
-RUNTIME_CONFIG_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
+RUNTIME_CONFIG_DIR="${CLAUDE_CONFIG_DIR:-C:/Users/User/Projects/finally/.claude}"
 SCOPE="global"
 
 # Artifact destinations are derived from runtime layout

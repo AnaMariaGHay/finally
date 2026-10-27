@@ -14,9 +14,9 @@ Only write the forensic report.
 ## Step 1: Get Problem Description
 
 ```bash
-IFS= read -rd '' GSD_ARGS <<'GSD_ARGS_END' || true
+IFS= read -rd '' GSD_ARGS <<'GSD_ARGS_END_69439d6c780eb6b7c75958b9eba0354c' || true
 $ARGUMENTS
-GSD_ARGS_END
+GSD_ARGS_END_69439d6c780eb6b7c75958b9eba0354c
 GSD_ARGS=${GSD_ARGS%$'\n'}
 PROBLEM="$GSD_ARGS"
 ```
