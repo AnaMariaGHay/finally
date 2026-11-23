@@ -205,3 +205,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# GSD tooling keeps code in lib/ folders; do not ignore them
+!.claude/**/lib/
